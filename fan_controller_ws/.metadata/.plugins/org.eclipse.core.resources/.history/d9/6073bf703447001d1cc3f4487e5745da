@@ -1,0 +1,38 @@
+ /******************************************************************************
+ *
+ * Module: ADC
+ *
+ * File Name: adc.h
+ *
+ * Description: header file for the ATmega32 ADC driver
+ *
+ * Author: Esraa Ali
+ *
+ *******************************************************************************/
+
+#ifndef ADC_H_
+#define ADC_H_
+#include "adc_configuration.h"
+#include "std_types.h"
+
+/*******************************************************************************
+ *                      Functions Prototypes                                   *
+ *******************************************************************************/
+
+/*
+ * Description : Setup ADC Module
+ * Arguments   : pointer to the struct which contain needed member to init the adc
+ * Return type : none
+ */
+void ADC_init(const ADC_Config_Type* Config_Ptr);
+
+/*
+ * Description : Function responsible for read analog data from a certain ADC channel
+                 and convert it to digital using the ADC driver using polling technique.
+ * Arguments   : channel number to be read .
+ * Return type : none .
+ */
+uint16 ADC_readChannel(uint8 channel_num);
+
+
+#endif /* ADC_H_ */

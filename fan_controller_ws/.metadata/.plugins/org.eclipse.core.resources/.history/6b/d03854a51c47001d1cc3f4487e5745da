@@ -1,0 +1,26 @@
+ /******************************************************************************
+ *
+ * Module: DC motor
+ *
+ * File Name: lcd.c
+ *
+ * Description: Source file for the DC motor driver
+ *
+ * Author: Esraa Ali
+ *
+ *******************************************************************************/
+
+#include "dc_motor.h" /* header file of DC motor*/
+#include "common_macros.h"
+#include "gpio.h" /* header file of GPIO*/
+
+/*******************************************************************************
+ *                      Functions Definitions                                  *
+ *******************************************************************************/
+
+/*
+ * Description :
+ * Initialize the LCD:
+ * 1. Setup the LCD pins directions by use the GPIO driver.
+ * 2. Setup the LCD Data Mode 4-bits or 8-bits.
+ */

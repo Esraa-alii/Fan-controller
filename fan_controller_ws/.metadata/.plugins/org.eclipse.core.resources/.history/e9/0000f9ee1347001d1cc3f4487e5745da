@@ -1,0 +1,40 @@
+ /******************************************************************************
+ *
+ * Module: ADC
+ *
+ * File Name: adc.h
+ *
+ * Description: header file for the ATmega16 ADC driver
+ *
+ * Author: Esraa Ali
+ *
+ *******************************************************************************/
+
+#ifndef ADC_H_
+#define ADC_H_
+#include "adc_configuration.h"
+#include "std_types.h"
+
+/*******************************************************************************
+ *                      Functions Prototypes                                   *
+ *******************************************************************************/
+
+/*
+ * Description :
+ * Function responsible for initialize the ADC driver.
+ */
+void ADC_init(const ADC_Config_Type* Config_Ptr);
+
+/*
+ * Description :
+ * Function responsible for read analog data from a certain ADC channel
+ * and convert it to digital using the ADC driver.
+ */
+uint16 ADC_readChannel(uint8 channel_num);
+
+/* Description :
+ * Reseting all the registers of the ADC
+ */
+void ADC_Deinit(void);
+
+#endif /* ADC_H_ */
